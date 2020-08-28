@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y supertuxkart
 COPY ./xpra.conf /etc/xpra/xpra.conf
 
 # add tux user
-RUN useradd --create-home --shell /bin/bash tux --groups xpra --uid 1000
+RUN useradd --create-home --shell /bin/bash tux --groups xpra
 USER tux
 WORKDIR /home/tux
 
