@@ -1,2 +1,3 @@
 # docker-supertuxkart
-Docker image which makes Wireshark available via HTML5 using XPRA
+
+Docker image which makes SuperTuxKart available via HTML5 using XPRA.
