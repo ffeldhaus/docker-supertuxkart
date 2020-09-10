@@ -2,6 +2,8 @@
 
 This docker image provides remote access to [SuperTuxKart](https://supertuxkart.net/) using [Xpra](https://xpra.org/) with HTML5 based web client listening on port 14500 for websocket connections.
 
+The docker host needs to have access to a NVIDIA GPU and you need to follow [these steps to prepare the docker host](https://github.com/ffeldhaus/docker-xpra-html5-opengl-minimal#prerequisites-for-the-docker-host).
+
 By default, the container uses the default self-signed certificate to offer SSL. If you want to specify your own certificate, you can overwrite the default SSL certificate with the docker parameter similar to --mount type=bind,source="$(pwd)"/ssl-cert.pem,target=/etc/xpra/ssl-cert.pem,readonly (make sure to put the ssl-cert.pem file in the current folder or modify the source path).
 
 By default, Xpra can only be accessed using a password. The default password is xpra, but can be changed by setting the environment variable XPRA_PW (e.g. using the `docker run` parameter `-e XPRA_PW=mypassword`).
