@@ -16,4 +16,4 @@ RUN apt-get update && \
     apt-get autoremove -y --purge && \
     rm -rf /var/lib/apt/lists/*
 
-CMD "vglrun -d /dev/dri/card0 /usr/games/supertuxkart --fullscreen --screensize=4096x2160"
+CMD ["vglrun -d /dev/dri/card0 /usr/games/supertuxkart"]
