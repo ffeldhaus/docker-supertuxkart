@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<stkconfig version="8" >
+    <!-- Video Settings
+             width : Screen/window width in pixels
+             height : Screen/window height in pixels
+             prev_width : Previous screen/window width
+             prev_height : Previous screen/window height
+             window_x : If remember_window_location is true
+             window_y : If remember_window_location is true
+             show_fps : Display frame per seconds
+             max_fps : Maximum fps, should be at least 60
+             force_legacy_device : Force OpenGL 2 context, even if OpenGL 3 is available.
+             split_screen_horizontally : When playing a non-square amount of players (e.g. 2), should it split horizontally (top/bottom)
+             enable_texture_compression : Enable Texture Compression
+             enable_high_definition_textures : Enable high definition textures. Bit flag: bit 0 = enabled/disabled; bit 1 = set by user/set as default
+             enable_glow : Enable Glow
+             enable_bloom : Enable Bloom
+             enable_light_shaft : Enable Light Shafts
+             enable_dynamic_lights : Enable Dynamic Lights
+             enable_dof : Enable Depth of Field
+             old_driver_popup : Determines if popup message about too old drivers should be displayed.
+             scale_rtts_factor : Allows to increase performance by setting lower RTTs resolution. Value should be smaller or equal to 1.0
+             max_texture_size : Max texture size when high definition textures are disabled
+             hq_mipmap : Generate mipmap for textures using high quality method with SSE -->
+    <Video
+        fullscreen="true"
+        remember_window_location="false"
+        window_x="-1"
+        window_y="-1"
+        show_fps="true"
+        enable_texture_compression="true"
+        enable_high_definition_textures="3"
+        enable_glow="true"
+        enable_bloom="true"
+        enable_light_shaft="true"
+        enable_dynamic_lights="true"
+        enable_dof="true"
+        old_driver_popup="true"
+        scale_rtts_factor="1.000000"
+        max_texture_size="512"
+        hq_mipmap="true"
+    >
+    </Video>
+    <!-- Graphics Quality Settings
+             particles-effecs : Particles effects: 0 disabled, 1 only important, 2 enabled
+             christmas-mode : Christmas hats: 0 use current date, 1 always on, 2 always off
+             easter-ear-mode : Easter Bunny Ears: 0 use current date, 1 always on, 2 always off
+             animated-characters : Whether to display animated characters
+             geometry_level : Geometry quality 0=everything is displayed; 1=a few details are displayed; 2=lowest level, no details
+             anisotropic : Quality of anisotropic filtering (usual values include 2-4-8-16; 0 to disable)
+             vsync : Whether vertical sync is enabled
+             motionblur_enabled : Whether motion blur should be enabled
+             mlaa : Whether MLAA anti-aliasing should be enabled
+             ssao : Enable Screen Space Ambient Occlusion
+             light_scatter : Enable light scattering shaders
+             shadows_resolution : Shadow resolution (0 = disabled
+             Degraded_IBL : Disable specular IBL -->
+    <GFX
+        particles-effecs="2"
+        animated-characters="true"
+        geometry_level="0"
+        anisotropic="16"
+        motionblur_enabled="true"
+        mlaa="true"
+        ssao="true"
+        light_scatter="true"
+        shadows_resolution="1024"
+        Degraded_IBL="false"
+    >
+    </GFX>
+</stkconfig>
