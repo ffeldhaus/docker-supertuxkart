@@ -1,6 +1,6 @@
-FROM ffeldhaus/docker-xpra-html5-opengl-minimal
+FROM ffeldhaus/xpra-html5-gpu-minimal
 
-LABEL version="0.2"
+LABEL version="0.3"
 LABEL maintainer="florian.feldhaus@gmail.com"
 
 ARG DEBIAN_FRONTEND=noninteractive
@@ -16,4 +16,10 @@ RUN apt-get update && \
     apt-get autoremove -y --purge && \
     rm -rf /var/lib/apt/lists/*
 
-CMD "vglrun -d /dev/dri/card0 /usr/games/supertuxkart --fullscreen --screensize=4096x2160"
+# copy SupertTuxKart config file
+COPY ./config.xml /home/xpra/.config/supertuxkart/config-0.10/config.xml
+
+COPY ./xpra.conf /etc/xpra/xpra.conf
+COPY docker-entrypoint.sh /docker-entrypoint.sh
+
+CMD ["vglrun -d /dev/dri/card0 /usr/games/supertuxkart"]
